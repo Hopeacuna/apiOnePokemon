@@ -58,6 +58,11 @@ function damageFrom(json) {
     let doubleFromArray = json.damage_relations.double_damage_from;
     // console.log(doubleFrom);
 
+    while (document.querySelector('#terribleAgainstResults').firstChild) {
+        document.querySelector('#terribleAgainstResults').removeChild(document.querySelector('#terribleAgainstResults').firstChild);
+        
+    }
+
     if (doubleFromArray.length === 0) {
         terribleAgainst.innerText = "None";
     }
