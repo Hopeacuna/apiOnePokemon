@@ -7,7 +7,7 @@ const baseURL = 'https://pokeapi.co/api/v2/type/';
 async function matchupFinder(clicked_id) {
     let selectedType = baseURL + clicked_id + '/';
     findTyping(selectedType);
-    // await document.querySelector(".btn btn-danger").innerText = json.name;
+    
 }
 
 function findTyping(selectedType) {
@@ -20,6 +20,7 @@ function findTyping(selectedType) {
             // console.log(json);
             damageFrom(json);
             damageTo(json);
+            document.querySelector("#userSelection").innerText = json.name;
         })
 
         .catch(err => console.log(err))
